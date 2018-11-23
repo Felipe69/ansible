@@ -1,0 +1,23 @@
+---
+  - name: Create keytab for Squid.
+    tasks:
+      - name: kinit
+        shell: kinit -k -t /root/teste.keytab  --password-file="/tmp/pass" srv_ansible
+        args:
+          executable: "/usr/bin/kinit"
+
+      - name: export "KRB5"
+        shell: export KRB5_KTNAME=FILE:/etc/squid/HTTP.keytab
+
+      - name: Create keytab
+        shell: net ads keytab CREATE
+
+      - name: Create keytab
+        shell: net ads keytab ADD HTTP
+
+      - name: Check keytab
+        shell: klist -k /etc/squid/HTTP.keytab
+
+      - name: Adjust permissions
+        shell: chgrp squid /etc/squid/HTTP.keytab
+        shell: chmod g+r /etc/squid/HTTP.keytab
