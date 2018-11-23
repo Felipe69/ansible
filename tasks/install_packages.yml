@@ -1,0 +1,15 @@
+---
+  - name: Configure domain integrations
+    tasks:
+      - name: Install packages
+        yum:
+          name: "{{ packages }}"
+        vars:
+          packages:
+            - krb5-workstation
+            - samba-common-tools
+            - sssd-ad
+            - samba-winbind
+            - samba-winbind-clients
+        notify:
+          - restart smb

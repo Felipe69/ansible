@@ -1,0 +1,5 @@
+---
+# tasks file for felipe.kerberos
+- import_tasks: install_packages.yml
+- import_tasks: configure.yml
+- import_tasks: service.yml

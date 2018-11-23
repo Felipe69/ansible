@@ -1,0 +1,5 @@
+---
+# defaults file for felipe.kerberos
+ - hosts: all
+ roles:
+ - {role: felipe.kerberos}
