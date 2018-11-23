@@ -1,4 +1,17 @@
 ---
+  name: Create keytab squid
+  connection: local
+  gather_facts: false
+  tasks: Create keytab squid
+  command: ktutil
+  
+           - "addent -password -p {{ kuser }}@MYDOMAIN.LOCAL -k 1 -e rc4-hmac"
+           - "wkt /username.keytab"
+           - "quit"
+         Password: "{{ kpw }}"
+
+
+
   - name: Create keytab for Squid.
     tasks:
       - name: kinit

@@ -1,2 +1,4 @@
 ---
 # vars file for felipe.kerberos
+kuser: srv_ansible
+k_password: "interop@2018"
