@@ -4,4 +4,3 @@
       name: smb
       status: restarted
       enables: yes
-      
