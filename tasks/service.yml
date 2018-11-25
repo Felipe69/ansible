@@ -4,3 +4,9 @@
       name: smb
       status: restarted
       enables: yes
+
+  - name: service squid
+    service:
+      name: squid
+      status: restarted
+      enables: yes

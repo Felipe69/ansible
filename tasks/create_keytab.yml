@@ -4,7 +4,7 @@
   gather_facts: false
   tasks: Create keytab squid
   command: ktutil
-  
+
            - "addent -password -p {{ kuser }}@MYDOMAIN.LOCAL -k 1 -e rc4-hmac"
            - "wkt /username.keytab"
            - "quit"
@@ -15,7 +15,7 @@
   - name: Create keytab for Squid.
     tasks:
       - name: kinit
-        shell: kinit -k -t /root/teste.keytab  --password-file="/tmp/pass" srv_ansible
+        shell: kinit -k -t /root/teste.keytab  --password-file="/var/lib/awx/projects/felipe.kerberos/templates/pass" srv_ansible
         args:
           executable: "/usr/bin/kinit"
 

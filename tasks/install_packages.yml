@@ -11,5 +11,4 @@
             - sssd-ad
             - samba-winbind
             - samba-winbind-clients
-        notify:
-          - restart smb
+      
