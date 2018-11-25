@@ -1,6 +1,7 @@
 ---
-  - name: Configure domain integrations
-    tasks:
+- name: Configure domain integrations
+  hosts: all
+  tasks:
       - name: Install packages
         yum:
           name: "{{ packages }}"
@@ -11,4 +12,3 @@
             - sssd-ad
             - samba-winbind
             - samba-winbind-clients
-      

@@ -1,5 +1,3 @@
 ---
-# defaults file for felipe.kerberos
- - hosts: all
- roles:
- - {role: felipe.kerberos}
+  roles:
+    - role: '/home/felipeaguiar/Documents/Linux/code/Ansible/ansible/roles/felipe.kerberos'
