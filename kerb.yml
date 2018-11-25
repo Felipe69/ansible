@@ -1,5 +1,6 @@
 ---
 # defaults file for felipe.kerberos
- - hosts: all
+ - name: Deploy kerberos
+   hosts: all
    roles:
-   - felipe.kerberos 
+    - role: felipe.kerberos 
