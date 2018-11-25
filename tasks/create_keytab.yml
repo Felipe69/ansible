@@ -15,7 +15,7 @@
   - name: Create keytab for Squid.
     tasks:
       - name: kinit
-        shell: kinit -k -t /root/teste.keytab  --password-file="/var/lib/awx/projects/felipe.kerberos/templates/pass" srv_ansible
+        shell: kinit -k -t /root/teste.keytab  --password-file="/var/lib/awx/projects/felipe.kerberos/templates/pass" felipe.liota
         args:
           executable: "/usr/bin/kinit"
 
